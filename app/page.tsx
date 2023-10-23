@@ -1,3 +1,11 @@
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
-  return <p className="text-green-800 font-bold">Hello Notion Clone</p>;
+  return (
+    <div>
+      <Button variant="secondary" size="lg">
+        Click Me
+      </Button>
+    </div>
+  );
 }
