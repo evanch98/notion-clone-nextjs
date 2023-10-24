@@ -8,6 +8,7 @@ import { Navigation } from "./_components/navigation";
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, isLoading } = useConvexAuth();
 
+  // if it is a loading state, show the Spinner component
   if (isLoading) {
     return (
       <div className="h-full flex items-center justify-center">
@@ -16,6 +17,8 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     );
   }
 
+  // to protect the route from being accessed without logging in.
+  // redirect the user to the landing page
   if (!isAuthenticated) {
     return redirect("/");
   }
