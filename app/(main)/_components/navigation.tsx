@@ -16,6 +16,42 @@ export const Navigation = () => {
   const [isResetting, setIsResetting] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(isMobile); // collapse the sidebar by default if it is a mobile
 
+  const handleMouseDown = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    isResizingRef.current = true;
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  };
+
+  // to handle resizing the sidebar
+  const handleMouseMove = (event: MouseEvent) => {
+    if (!isResizingRef.current) return; // if isResizingRef is false, break the function
+    let newWidth = event.clientX; // get the width
+
+    if (newWidth < 240) newWidth = 240; // minimum width limit
+    if (newWidth > 480) newWidth = 480; // maximum width limit
+
+    // if sidebarRef and navbarRef are active
+    if (sidebarRef.current && navbarRef.current) {
+      sidebarRef.current.style.width = `${newWidth}px`; // set the sidebar width
+      navbarRef.current.style.setProperty("left", `${newWidth}px`); // reposition the navbar
+      navbarRef.current.style.setProperty(
+        "width",
+        `calc(100% - ${newWidth}px)`
+      ); // recalculate the navbar width
+    }
+  };
+
+  const handleMouseUp = () => {
+    isResizingRef.current = false;
+    document.removeEventListener("mousemove", handleMouseMove);
+    document.removeEventListener("mouseup", handleMouseUp);
+  };
+
   return (
     <>
       <aside
@@ -43,7 +79,11 @@ export const Navigation = () => {
           <p>Documents</p>
         </div>
         {/* To resize the sidebar */}
-        <div className="opacity-0 group-hover/sidebar:opacity-100 transition cursor-ew-resize absolute h-full w-1 bg-primary/10 right-0 top-0" />
+        <div
+          onMouseDown={handleMouseDown}
+          onClick={() => {}}
+          className="opacity-0 group-hover/sidebar:opacity-100 transition cursor-ew-resize absolute h-full w-1 bg-primary/10 right-0 top-0"
+        />
       </aside>
       {/* Navbar */}
       <div
