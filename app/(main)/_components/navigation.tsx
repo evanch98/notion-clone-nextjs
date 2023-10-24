@@ -68,6 +68,19 @@ export const Navigation = () => {
     }
   };
 
+  // handle the collapsing of the sidebar
+  const collapse = () => {
+    if (sidebarRef.current && navbarRef.current) {
+      setIsCollapsed(true);
+      setIsResetting(true);
+
+      sidebarRef.current.style.width = "0";
+      navbarRef.current.style.setProperty("width", "100%");
+      navbarRef.current.style.setProperty("left", "0");
+      setTimeout(() => setIsResetting(false), 300);
+    }
+  };
+
   return (
     <>
       <aside
@@ -81,6 +94,7 @@ export const Navigation = () => {
         {/* To collapse the sidebar */}
         <div
           role="button"
+          onClick={collapse}
           className={cn(
             "h-6 w-6 text-muted-foreground rounded-sm hover:bg-neutral-300 dark:bg-neutral-600 absolute top-3 right-2 opacity-0 group-hover/sidebar:opacity-100 transition",
             isMobile && "opacity-100"
@@ -113,7 +127,11 @@ export const Navigation = () => {
         <nav className="bg-transparent px-3 py-2 w-full">
           {/* If the sidebar is collapsed, show the menu icon to let the user reopen the sidebar */}
           {isCollapsed && (
-            <MenuIcon role="button" className="h-6 w-6 text-muted-foreground" />
+            <MenuIcon
+              onClick={resetWidth}
+              role="button"
+              className="h-6 w-6 text-muted-foreground"
+            />
           )}
         </nav>
       </div>
