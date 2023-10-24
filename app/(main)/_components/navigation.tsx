@@ -1,8 +1,15 @@
 "use client";
 
 import { ChevronsLeft } from "lucide-react";
+import { ElementRef, useRef, useState } from "react";
 
 export const Navigation = () => {
+  const isResizingRef = useRef(false);
+  const sidebarRef = useRef<ElementRef<"aside">>(null);
+  const navbarRef = useRef<ElementRef<"div">>(null);
+  const [isResetting, setIsResetting] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
   return (
     <>
       <aside className="group/sidebar h-full bg-secondary overflow-y-auto relative flex w-60 flex-col z-[99999]">
