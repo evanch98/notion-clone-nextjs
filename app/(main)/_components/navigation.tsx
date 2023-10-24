@@ -8,13 +8,13 @@ import { useMediaQuery } from "usehooks-ts";
 
 export const Navigation = () => {
   const pathname = usePathname();
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 768px)"); // mobile screen size break point
 
   const isResizingRef = useRef(false);
   const sidebarRef = useRef<ElementRef<"aside">>(null);
   const navbarRef = useRef<ElementRef<"div">>(null);
   const [isResetting, setIsResetting] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(isMobile);
+  const [isCollapsed, setIsCollapsed] = useState(isMobile); // collapse the sidebar by default if it is a mobile
 
   return (
     <>
@@ -45,6 +45,7 @@ export const Navigation = () => {
         {/* To resize the sidebar */}
         <div className="opacity-0 group-hover/sidebar:opacity-100 transition cursor-ew-resize absolute h-full w-1 bg-primary/10 right-0 top-0" />
       </aside>
+      {/* Navbar */}
       <div
         ref={navbarRef}
         className={cn(
@@ -54,6 +55,7 @@ export const Navigation = () => {
         )}
       >
         <nav className="bg-transparent px-3 py-2 w-full">
+          {/* If the sidebar is collapsed, show the menu icon to let the user reopen the sidebar */}
           {isCollapsed && (
             <MenuIcon role="button" className="h-6 w-6 text-muted-foreground" />
           )}
