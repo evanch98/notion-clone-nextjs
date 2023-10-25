@@ -8,6 +8,7 @@ import { useMediaQuery } from "usehooks-ts";
 import { UserItem } from "./user-item";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { Item } from "./item";
 
 export const Navigation = () => {
   const pathname = usePathname();
