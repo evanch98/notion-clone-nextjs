@@ -9,7 +9,7 @@ interface ItemProps {
   id?: Id<"documents">;
   documentIcon?: string;
   active?: boolean;
-  expanded?: string; // expanded = see the children of the document
+  expanded?: boolean; // expanded = see the children of the document
   isSearched?: boolean;
   level?: number; // to use it to set the padding of the document
   onExpand?: () => void;
