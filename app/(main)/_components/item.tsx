@@ -1,14 +1,33 @@
 "use client";
 
+import { Id } from "@/convex/_generated/dataModel";
 import { LucideIcon } from "lucide-react";
 
 interface ItemProps {
+  id?: Id<"documents">;
+  documentIcon?: string;
+  active?: boolean;
+  expanded?: string;
+  isSearched?: boolean;
+  level?: number;
+  onExpand?: () => void;
   label: string;
   onClick: () => void;
   icon: LucideIcon;
 }
 
-export const Item = ({ label, onClick, icon: Icon }: ItemProps) => {
+export const Item = ({
+  id,
+  documentIcon,
+  active,
+  expanded,
+  isSearched,
+  level = 0,
+  onExpand,
+  label,
+  onClick,
+  icon: Icon,
+}: ItemProps) => {
   return (
     <div
       onClick={onClick}
