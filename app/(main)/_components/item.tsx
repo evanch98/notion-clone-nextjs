@@ -30,6 +30,13 @@ export const Item = ({
   onClick,
   icon: Icon,
 }: ItemProps) => {
+  const handleExpand = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
+    onExpand?.();
+  };
+
   const ChevronIcon = expanded ? ChevronDown : ChevronRight; // change the icon based of the "expanded" prop
 
   return (
@@ -45,7 +52,7 @@ export const Item = ({
       {/* Render this part if and only if the item has an id (documents id) */}
       {!!id && (
         <div
-          onClick={() => {}}
+          onClick={handleExpand}
           role="button"
           className="h-full rounded-sm hover:bg-neutral-300 dark:bg-neutral-600 mr-1"
         >
