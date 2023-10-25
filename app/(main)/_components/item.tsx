@@ -61,7 +61,7 @@ export const Item = ({
       {/* Render this part if and only if the "isSearched" prop is true */}
       {isSearched && (
         <kbd className="ml-auto pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-          <span className="text-xs">Ctrl</span>k
+          <span className="text-xs">Ctrl+K</span>
         </kbd>
       )}
     </div>
