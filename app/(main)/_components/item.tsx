@@ -33,7 +33,7 @@ interface ItemProps {
   level?: number; // to use it to set the padding of the document
   onExpand?: () => void;
   label: string;
-  onClick: () => void;
+  onClick?: () => void;
   icon: LucideIcon;
 }
 
