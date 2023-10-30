@@ -25,6 +25,7 @@ export const Banner = ({ documentId }: BannerProps) => {
       success: "Note deleted!",
       error: "Failed to delete note.",
     });
+    router.push("/documents");
   };
 
   const onRestore = () => {
