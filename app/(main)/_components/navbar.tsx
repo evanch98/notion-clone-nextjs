@@ -7,6 +7,7 @@ import { MenuIcon } from "lucide-react";
 import { useParams } from "next/navigation";
 import { Title } from "./title";
 import { Banner } from "./banner";
+import { Menu } from "./menu";
 
 interface NavbarProps {
   isCollapsed: boolean;
