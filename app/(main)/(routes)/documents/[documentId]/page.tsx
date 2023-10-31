@@ -1,5 +1,6 @@
 "use client";
 
+import { Cover } from "@/components/cover";
 import { Toolbar } from "@/components/toolbar";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
