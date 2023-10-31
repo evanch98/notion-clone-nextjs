@@ -29,6 +29,7 @@
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-dropzone": "^14.2.3",
     "react-textarea-autosize": "^8.5.3",
     "sonner": "^1.0.3",
     "tailwind-merge": "^1.14.0",
