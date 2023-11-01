@@ -50,3 +50,16 @@ npm run dev
 ```
 
 5. **Start building and customizing your Notion Clone!**
+
+## Technologies Used
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Convex](https://www.convex.dev/)
+- [Clerk Auth](https://clerk.com/)
+- [Edge Store](https://edgestore.dev/)
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+
+## Acknowledgements
+- [clsx](https://www.npmjs.com/package/clsx): ![npm](https://img.shields.io/npm/v/clsx)
