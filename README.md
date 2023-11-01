@@ -62,4 +62,14 @@ npm run dev
 - [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
 
 ## Acknowledgements
-- ![clsx](https://img.shields.io/npm/v/clsx)
+- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority)
+- [clsx](https://www.npmjs.com/package/clsx)
+- [cmdk](https://www.npmjs.com/package/cmdk)
+- [emoji-picker-react](https://www.npmjs.com/package/emoji-picker-react)
+- [lucide-react](https://www.npmjs.com/package/lucide-react)
+- [react-dropzone](https://www.npmjs.com/package/react-dropzone)
+- [react-textarea-autosize](https://www.npmjs.com/package/react-textarea-autosize)
+- [sonner](https://www.npmjs.com/package/sonner)
+- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge)
+- [usehooks-ts](https://www.npmjs.com/package/usehooks-ts)
+- [zod](https://www.npmjs.com/package/zod)
