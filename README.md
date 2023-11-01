@@ -62,4 +62,4 @@ npm run dev
 - [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
 
 ## Acknowledgements
-- [clsx](https://www.npmjs.com/package/clsx): ![npm](https://img.shields.io/npm/v/clsx)
+- ![clsx](https://img.shields.io/npm/v/clsx)
