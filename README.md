@@ -5,7 +5,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/evanch98/notion-clone-nextjs?style=social)
 
 <br />
-June 2023. <br />
+November, 2023. <br />
 A Notion Clone web application built with Next.js, React, Tailwind CSS, TypeScript, Convex, Clerk Auth, Edge Store, and Zustand.
 
 ## Features
