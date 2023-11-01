@@ -1,3 +1,5 @@
 # notion-clone-nextjs
 
-Start Date: 23<sup>rd</sup> October, 2023.
+June, 2023.
+
+![GitHub repo size](https://img.shields.io/github/repo-size/evanch98/notion-clone-nextjs)
