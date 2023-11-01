@@ -33,4 +33,20 @@ npm install
 
 3. **Configure environment variables:**
 Create a `.env.local` file in the project root and set the necessary environment variables.
-You can find an example in `.env.example`.
+```
+CONVEX_DEPLOYMENT=
+NEXT_PUBLIC_CONVEX_URL=
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+EDGE_STORE_ACCESS_KEY=
+EDGE_STORE_SECRET_KEY=
+```
+
+4. **Run the development server:**
+```bash
+npm run dev
+```
+
+5. **Start building and customizing your Notion Clone!**
