@@ -15,3 +15,13 @@ A Notion Clone web application built with Next.js, React, Tailwind CSS, TypeScri
 - File upload and storage using Edge Store.
 - Responsive design with Tailwind CSS.
 - State management using Zustand.
+
+## Getting Started
+
+These instructions will help you set up and run the project on your local machine for development and testing purposes.
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/evanch98/notion-clone-nextjs.git
+cd your-repo-name
+```
